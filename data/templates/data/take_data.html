@@ -1,0 +1,42 @@
+<form action="{% url "take_data" %}" method="POST" enctype="multipart/form-data" accept-charset="utf-8" class="form-horizontal">
+{% csrf_token %}
+<div class="form-group">
+        <label>Enter your name :</label>
+        <input type="text" name="name0" id="name0"><br>
+        <label>Enter your mobile no. :</label>
+        <input type="text" name="mob0" id="mob0"><br>
+        <label>Enter your email id :</label>
+        <input type="text" name="email0" id="email0"><br>
+        <label>Enter your age : </label>
+		<input type="number" step="any" min="0" max="150" pattern='\d+' placeholder = 'Enter Age' name="age0" id="age0"><br>
+		<label>How many children you have ?</label>
+		<input type="number" step="any" min="0" max="15" pattern='\d+' placeholder = 'How many children you have' name="child0" id="child0"><br>
+		<label>Choose your gender</label>
+		<input type="radio"  name="sex" id="male" value="0">
+		<label for="male">MALE</label>
+		<input type="radio"  name="sex" id="female" value="1">
+		<label for="female">FEMALE</label><br>
+		<label>Are you a smoker? </label>
+		<input type="radio" name="smoker" id="yes" value="0">
+		<label for="yes">YES</label>
+		<input type="radio" name="smoker" id="no" value="1">
+		<label for="no">NO</label><br>
+
+		<label >Choose your regeion : </label>
+		<input type="radio" name="region" id="southwest" value="0">
+		<label for="southwest">Southwest</label>
+		<input type="radio" name="region" id="southeast" value="1">
+		<label for="southeast">Southeast</label>
+		<input type="radio" name="region" id="northwest" value="2">
+		<label for="northwest">Northwest</label>
+		<input type="radio" name="region" id="northeast" value="3">
+		<label for="northeast">Northeast</label><br>
+		<label>Enter your bmi : </label>
+		<input type="number" step="any" pattern="\d+" placeholder="Enter bmi" name="bmi0" id="bmi0">
+    </div>
+<div class="form-group">
+    <div class="col-md-3 col-sm-3 col-xs-12 col-md-offset-3" style="margin-bottom:10px;">
+         <button class="btn btn-primary"> <span class="glyphicon glyphicon-upload" style="margin-right:5px;"></span>Upload </button>
+    </div>
+</div>
+</form>
